@@ -1,8 +1,9 @@
 import os
+import json
 
 class StorageManager:
     def __init__(self):
-        self.filename = ".zpdata.txt"
+        self.filename = ".zpdata.json"
 
         self.filepath = ""
 
@@ -30,7 +31,7 @@ class StorageManager:
 
         if not os.path.exists(self.filepath):
             with open(self.filepath, "w") as f:
-                f.write("")
+                f.write("[]")
             print("~ New Database Created ~")
         else:
             print("~ Found Existing Database ~")
@@ -42,7 +43,14 @@ print ("~ HELLO THERE! I\'M ZAPPY.,~")
 
 storage = StorageManager()
 storage.setup()
-
 print(f"Saving Data In {storage.get_path()}")
 print("~ Thank You for the Permissions >w< ~")
+
+class Expense:
+    def __init__(self, category, amount, date):
+        pass
+
+class ExpenseManager:
+    pass
+
 
