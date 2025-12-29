@@ -1,5 +1,5 @@
 __pycache__/
 *.py[cod]
-.zpdata.txt
-.zpstorage/
-
+.qdata.txt
+.qstorage/
+.gitignore

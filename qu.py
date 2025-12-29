@@ -5,8 +5,8 @@ from datetime import date
 class StorageManager:
     def __init__(self):
 
-        self.config_file = os.path.join(os.path.expanduser("~"), ".zpconfig.json")
-        self.filename = ".zpdata.json"
+        self.config_file = os.path.join(os.path.expanduser("~"), ".qconfig.json")
+        self.filename = ".qdata.json"
         self.filepath = ""
 
     def setup(self):
@@ -20,8 +20,8 @@ class StorageManager:
             except:
                 pass
 
-        print("=== ZAPPY Needs Storage Permission For Work >w< ===")
-        print("~ Where Should Zappy Store Your Data? ~")
+        print("=== Qu Needs Storage Permission For Work >w< ===")
+        print("~ Where Should Qu Store Your Data? ~")
         print("1. System (In Home Folder) - Recommended")
         print("2. Local (This folder)")
         
@@ -29,7 +29,7 @@ class StorageManager:
 
         if choice == "1":
             home_dir = os.path.expanduser("~") 
-            folder_path = os.path.join(home_dir, ".zpstorage")
+            folder_path = os.path.join(home_dir, ".qstorage")
             
             if not os.path.exists(folder_path):
                 os.makedirs(folder_path)
@@ -56,7 +56,7 @@ class StorageManager:
     def get_path(self):
         return self.filepath
 
-print ("~ HELLO THERE! I\'M ZAPPY >w< ~")
+print ("~ HELLO THERE! I\'M QU >w< ~")
 
 storage = StorageManager()
 storage.setup()
